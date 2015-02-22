@@ -78,7 +78,7 @@ def app(request):
         collections
     )
     serviceXMLText = XML_HEADER % etree.tostring(serviceXML, pretty_print=True)
-    resp = HttpResponse(serviceXMLText, mimetype="application/atom+xml")
+    resp = HttpResponse(serviceXMLText, content_type="application/atom+xml")
     return resp
 
 
